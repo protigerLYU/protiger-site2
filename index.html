@@ -25,7 +25,7 @@
       display: flex;
       gap: 20px;
       margin-bottom: 40px;
-      align-items: flex-start;
+      align-items: stretch; /* 等高关键 */
     }
     .text {
       flex: 2;
@@ -33,15 +33,21 @@
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     .images {
       flex: 1;
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* 两列 */
+      grid-template-rows: 1fr 1fr;    /* 两行 */
       gap: 15px;
     }
     .images img {
       width: 100%;
+      height: 100%;
+      object-fit: cover; /* 保持裁剪比例 */
       border-radius: 6px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
@@ -63,6 +69,7 @@
     <h1>天津市傲虎科技有限公司</h1>
   </header>
   <main>
+    <!-- 第一类 -->
     <section class="category">
       <div class="text">
         <h2>第一类：同步带类产品</h2>
@@ -112,6 +119,7 @@
       </div>
     </section>
 
+    <!-- 第二类 -->
     <section class="category">
       <div class="text">
         <h2>第二类：工业清洁剂类产品</h2>
@@ -161,6 +169,7 @@
       </div>
     </section>
 
+    <!-- 第三类 -->
     <section class="category">
       <div class="text">
         <h2>第三类：传感器类产品</h2>
