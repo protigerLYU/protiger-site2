@@ -26,6 +26,9 @@
     header,footer { background:var(--navy); color:white; text-align:center; padding:30px 20px; }
     .header-inner { max-width:1120px; margin:auto; }
     .brand { font-size:14px; letter-spacing:3px; margin:0 0 5px; color:#c6d9e7; }
+    .brand-identity { display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:16px 24px; margin:12px 0 18px; }
+    .brand-identity h1 { margin:0; }
+    .brand-logo { display:block; width:178px; height:54px; background:#fff; border-radius:6px; }
     h1 { font-size:38px; line-height:1.5; margin:0 0 10px; font-weight:700; letter-spacing:3px; }
     .header-intro { font-size:16px; margin:0 auto 16px; max-width:960px; color:#e4edf3; }
     .contact { margin:0; }
@@ -59,6 +62,16 @@
     .service h2 { font-size:22px; margin-bottom:10px; }
     .service p { color:#526574; margin-bottom:10px; }
     .service a { font-weight:700; }
+    .trademark { display:grid; grid-template-columns:minmax(0,1fr) minmax(240px,340px); gap:32px; align-items:center; padding:28px; margin-bottom:32px; background:#fff; border:1px solid var(--line); border-radius:8px; }
+    .trademark h2 { margin-bottom:20px; }
+    .trademark dl { margin:0 0 24px; }
+    .trademark dl div { display:grid; grid-template-columns:100px minmax(0,1fr); gap:16px; padding:12px 0; border-bottom:1px solid #edf1f4; }
+    .trademark dt { color:#61717f; }
+    .trademark dd { margin:0; font-weight:700; }
+    .certificate-link { display:inline-block; padding:9px 18px; border:1px solid var(--blue); border-radius:4px; font-weight:700; text-decoration:none; }
+    .certificate-link:hover { background:#edf3f7; }
+    .certificate-preview { display:block; border:1px solid var(--line); border-radius:4px; overflow:hidden; }
+    .certificate-preview img { display:block; width:100%; height:auto; }
     footer { font-size:13px; padding:23px 20px; }
     footer p { margin:3px 0; } footer a { color:#e4edf3; }
     .sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; }
@@ -71,6 +84,9 @@
       .images { min-width:0; } figure { position:static; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); align-items:center; }
       figcaption { border:0; text-align:left; } .image-note { padding:14px 10px 8px; border-top:1px solid var(--line); }
       .service { padding:22px 18px; }
+      .brand-identity { gap:12px 18px; } .brand-logo { width:158px; height:48px; }
+      .trademark { grid-template-columns:minmax(0,1fr); gap:24px; padding:22px 18px; }
+      .certificate-preview { width:100%; max-width:340px; margin:auto; }
     }
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
   </style>
@@ -80,11 +96,17 @@
   <a class="skip-link" href="#products">跳转到产品目录</a>
   <header><div class="header-inner">
     <p class="brand">工业设备备件与定制配套</p>
-    <h1>徐州诚泰</h1>
+    <div class="brand-identity">
+      <svg class="brand-logo" viewBox="425 540 167 51" width="178" height="54" role="img" aria-labelledby="xzcht-logo-title" xmlns="http://www.w3.org/2000/svg">
+        <title id="xzcht-logo-title">XZCHT 商标</title>
+        <image href="images/brand/xzcht-trademark-certificate.png" width="1048" height="2048" />
+      </svg>
+      <h1>徐州诚泰</h1>
+    </div>
     <p class="header-intro">面向工业设备维护与生产线配套，提供输送传动、流体控制、管路连接、密封紧固、筛分夹持及电气控制产品。支持设备备件选配、按图按样配套与非标定制。</p>
     <p class="contact">产品咨询：<a href="tel:18251832484">182 5183 2484</a></p>
   </div></header>
-  <nav class="category-nav" aria-label="产品分类"><a href="#transmission">输送与传动组件</a><a href="#fluid">流体控制组件</a><a href="#piping">管路与连接配套</a><a href="#sealing">密封与紧固组件</a><a href="#mechanical">筛分与夹持组件</a><a href="#control">电气与控制配套</a></nav>
+  <nav class="category-nav" aria-label="页面导航"><a href="#transmission">输送与传动组件</a><a href="#fluid">流体控制组件</a><a href="#piping">管路与连接配套</a><a href="#sealing">密封与紧固组件</a><a href="#mechanical">筛分与夹持组件</a><a href="#control">电气与控制配套</a><a href="#trademark">商标注册证</a></nav>
   <main id="products">
     <div class="catalog-heading"><h2>产品与配套范围</h2><p>围绕设备输送、流体控制、管路密封与机械电气配套，提供常用备件、专用组件及非标定制服务。</p></div>
     <section class="category" id="transmission" aria-labelledby="title-transmission">
@@ -170,6 +192,20 @@
         <figure><img src="images/catalog/control.webp" alt="控制主板与操作按钮品类示意，非实拍图片" width="880" height="660" loading="lazy" decoding="async"><figcaption>控制主板与操作按钮品类示意<span>图片为品类示意，具体外形以确认图纸或实物为准。</span></figcaption></figure>
         <div class="image-note"><b>配套咨询</b><p>告诉我们应用工况与安装要求，为您匹配产品方案。</p><a href="tel:18251832484">182 5183 2484</a></div>
       </aside>
+    </section>
+    <section class="trademark" id="trademark" aria-labelledby="trademark-title">
+      <div>
+        <p class="category-label">XZCHT / TRADEMARK</p>
+        <h2 id="trademark-title">XZCHT 商标注册证</h2>
+        <dl>
+          <div><dt>商标名称</dt><dd>XZCHT</dd></div>
+          <div><dt>国际分类</dt><dd>7、9、37、42</dd></div>
+          <div><dt>注册日期</dt><dd><time datetime="2025-08-14">2025年8月14日</time></dd></div>
+          <div><dt>有效期至</dt><dd><time datetime="2035-08-13">2035年8月13日</time></dd></div>
+        </dl>
+        <a class="certificate-link" href="images/brand/xzcht-trademark-certificate.png" target="_blank" rel="noopener">查看完整注册证（新窗口）</a>
+      </div>
+      <a class="certificate-preview" href="images/brand/xzcht-trademark-certificate.png" target="_blank" rel="noopener" aria-label="放大查看 XZCHT 商标注册证原图（新窗口）"><img src="images/brand/xzcht-trademark-certificate.png" alt="XZCHT 商标注册证及商品服务项目续页，保留原图中的信息遮挡" width="1048" height="2048" loading="lazy" decoding="async"></a>
     </section>
     <section class="service" aria-labelledby="service-title"><h2 id="service-title">产品配套与非标定制</h2><p>从日常消耗件到专用设备组件，徐州诚泰围绕使用工况、安装接口和维护需求提供选配服务。支持按图按样、旧件测绘及非标加工配套，欢迎携设备资料或产品需求咨询。</p><a href="tel:18251832484">电话咨询：182 5183 2484</a></section>
   </main>
